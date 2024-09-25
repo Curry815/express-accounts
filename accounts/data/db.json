@@ -1,0 +1,45 @@
+{
+  "accounts": [
+    {
+      "id": "X9LKriqCr",
+      "title": "买nodejs书",
+      "time": "2024-09-11",
+      "type": "-1",
+      "account": "25",
+      "remarks": "买来深入学习nodejs"
+    },
+    {
+      "id": "3-YLju5f3",
+      "title": "买电脑",
+      "time": "2023-02-08",
+      "type": "-1",
+      "account": "7300",
+      "remarks": "为了上网课"
+    },
+    {
+      "id": "mRQiD4s3K",
+      "title": "发工资",
+      "time": "2023-02-19",
+      "type": "1",
+      "account": "1",
+      "remarks": "终于发工资啦!~~"
+    }
+  ],
+  "users":[
+    {
+      "id": 1,
+      "name": "zhangsan",
+      "age": 18
+    },
+    {
+      "id": 2,
+      "name": "lisi",
+      "age": 20
+    },
+    {
+      "id": 3,
+      "name": "wangwu",
+      "age": 22
+    }
+  ]
+}
