@@ -3,16 +3,17 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var indexRouter = require('./routes/web/index');
-const authRouter = require('./routes/web/auth');
-// 导入 account 接口路由文件
-const accountRouter = require('./routes/api/account');
 // 导入 express-session
 const session = require("express-session");
 const MongoStore = require('connect-mongo');
 // 导入配置项
 const { DBHOST, DBPORT, DBNAME } = require('./config/config');
+
+// 导入 account 接口路由文件
+const accountRouter = require('./routes/api/account');
+var indexRouter = require('./routes/web/index');
+const authRouter = require('./routes/web/auth');
+const authApiRouter = require('./routes/api/auth');
 
 var app = express();
 
@@ -43,6 +44,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/', authRouter);
 app.use('/api', accountRouter);
+app.use('/api', authApiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

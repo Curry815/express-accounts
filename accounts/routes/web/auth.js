@@ -32,8 +32,9 @@ router.get('/login', (req, res) => {
 
 // 登录操作
 router.post('/login', (req, res) => {
-    // 查询数据库
+    // 获取用户名和密码
     let { username, password } = req.body;
+    // 查询数据库
     UserModel.findOne({username: username, password: md5(password)}).then((data, err) => {
         if (err) {
             res.status(500).send('登录失败');
